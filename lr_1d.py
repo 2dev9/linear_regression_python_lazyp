@@ -34,3 +34,9 @@ Yhat = a*X + b
 plt.scatter(X,Y)
 plt.plot(X,Yhat)
 plt.show()
+
+#calculate r-squared
+d1 = Y - Yhat
+d2 = Y - Y.mean()
+r2 = 1 - d1.dot(d1)/d2.dot(d2)
+print "r2 is ", r2
